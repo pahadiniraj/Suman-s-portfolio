@@ -1,13 +1,10 @@
-
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 import { useSelector } from "react-redux";
 
-
-
 const ParticlesComponent = (props) => {
-  const isDarkMode = useSelector(state => state.darkMode);
+  const isDarkMode = useSelector((state) => state.darkMode);
 
   const [init, setInit] = useState(false);
   useEffect(() => {
@@ -17,11 +14,6 @@ const ParticlesComponent = (props) => {
       setInit(true);
     });
   }, []);
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
 
   const options = useMemo(
     () => ({
@@ -34,7 +26,7 @@ const ParticlesComponent = (props) => {
           },
           onHover: {
             enable: true,
-            mode: 'grab',
+            mode: "attract",
           },
         },
         modes: {
@@ -49,14 +41,14 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         number: {
-          value: 150,
+          value: 150, // Adjust particle count for performance and visibility
           density: {
             enable: true,
-            value_area: 800
-          }
+            value_area: 800,
+          },
         },
         color: {
-          value: "#737373",
+          value: "#777777",
         },
         links: {
           color: "#737373",
@@ -72,38 +64,36 @@ const ParticlesComponent = (props) => {
             default: "bounce",
           },
           random: true,
-          speed: 1,
+          speed: 2, // Reduced speed for clearer visualization of blink
           straight: false,
         },
         opacity: {
-          value: 0.8,
+          value: 1, // Initial opacity
+          animation: {
+            enable: true, // Enable the blinking effect
+            speed: 1, // Speed of opacity changes
+            minimumValue: 0.2, // Lowest opacity value before blinking back
+            startValue: "random", // Start from random opacity for each particle
+            sync: false, // Each particle blinks independently
+          },
         },
-        "shape": {
-          "type": "polygon",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000",
           },
-          "polygon": {
-            "nb_sides": 6
-          },
-          "image": {
-            "src": "img/github.svg",
-            "width": 100,
-            "height": 100
-          }
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 2, max: 4 }, // Particle size range
         },
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
-
-  return <Particles id={props.id} init={init} options={options} />; 
+  return <Particles id={props.id} init={init} options={options} />;
 };
 
 export default ParticlesComponent;
