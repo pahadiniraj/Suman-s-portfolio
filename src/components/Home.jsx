@@ -1,24 +1,22 @@
 import React from "react";
-import {
-  buttonPrimary,
-  buttonSecondary,
-  headingPrimary,
-} from "../utils/StyleUtils";
+import { buttonPrimary, buttonSecondary } from "../utils/StyleUtils";
 import { Link } from "react-scroll";
+import SumanProfile from "../assets/images/SumanProfile.png";
+import HardwareImage from "../assets/images/hardwareBackground.jpg";
 
 export default function Home() {
   return (
-    <div className="px-3 py-10 md:p-20 min-h-screen flex items-center justify-between">
+    <div className="px-3 py-10 md:p-20 min-h-screen flex items-center justify-between gap-10">
       {/* Left Content */}
       <div className="space-y-8 text-center md:text-left w-full md:w-3/5">
-        <div className="text-blue-600">
+        <div className="text-primary">
           <p className=" md:text-3xl font-bold">
-            My name is <span className="text-blue-500">Suman Dhamala</span>
+            My name is <span>Suman Dhamala</span>
           </p>
           <p className="text-4xl md:text-6xl font-bold">I'm a Cryo Engineer</p>
         </div>
 
-        <p className={`text-lg md:text-xl  leading-relaxed `}>
+        <p className={`text-lg md:text-xl leading-relaxed`}>
           I specialize in cryogenics, a cutting-edge field that bridges the gap
           between science and technology. Let's work together to explore the
           future of engineering!
@@ -59,12 +57,29 @@ export default function Home() {
       </div>
 
       {/* Image Section */}
-      <div className="hidden md:block w-full md:w-2/5 text-center">
-        <img
-          src="https://via.placeholder.com/400" // Replace with your image URL
-          alt="Suman Dhamala"
-          className="rounded-lg shadow-lg object-cover h-96 w-96"
-        />
+      <div
+        className="hidden md:block h-[380px] w-[380px] text-center relative rounded-full overflow-hidden  border-8 border-[#9c9723]" // Added overflow-hidden to ensure content fits
+        style={{
+          backgroundImage: `url(${HardwareImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          {" "}
+          {/* Centering div */}
+          <img
+            src={SumanProfile}
+            alt="Suman Dhamala"
+            className="rounded-full object-cover h-[100%] w-[100%]" // Adjusting image size to fit within the circular container
+          />
+        </div>
+        <div
+          className="absolute top-0 left-0 h-full w-full rounded-full z-0 "
+          style={{
+            background: "rgba(0, 0, 0, 0.7)", // Optional overlay to blend better
+          }}
+        ></div>
       </div>
     </div>
   );

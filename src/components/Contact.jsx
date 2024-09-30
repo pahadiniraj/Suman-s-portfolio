@@ -12,7 +12,9 @@ import {
 
 export default function Contact() {
   return (
-    <div className={`bg-gray-500 bg-opacity-10 backdrop-blur-sm px-3 py-10 md:p-20 space-y-10`}>
+    <div
+      className={`bg-gray-500 bg-opacity-10 backdrop-blur-sm px-3 py-10 md:p-20 space-y-10`}
+    >
       <div className="border-l-4 border-primary pl-2">
         <p className="">CONNECT WITH ME</p>
         <p className={titlePrimary}>CONTACT ME</p>
@@ -55,7 +57,9 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className={`md:w-7/12 p-5 space-y-5 flex flex-col justify-center bg-primary text-custom-light-high`}>
+        <div
+          className={`md:w-7/12 p-5 space-y-5 flex flex-col justify-center bg-custom-primary text-black`}
+        >
           <p className="text-2xl font-bold">HOW CAN I HELP YOU?</p>
           <form className="space-y-5">
             <div className="space-y-1">
