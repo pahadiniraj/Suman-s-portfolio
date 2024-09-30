@@ -17,7 +17,7 @@ export default function Resume() {
 
           <div className="flex items-center gap-5 p-5 mx-2 rounded-lg bg-gray-300 bg-opacity-10 backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
             <div>
-              <i className="fa-solid fa-graduation-cap w-10 h-10 rounded-full bg-primary flex items-center justify-center text-custom-light-high"></i>
+              <i className="fa-solid fa-graduation-cap w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black"></i>
             </div>
             <div className="">
               <p className="font-bold">2018-2023</p>
@@ -31,7 +31,7 @@ export default function Resume() {
 
           <div className="flex items-center gap-5 p-5 mx-2 rounded-lg bg-gray-300 bg-opacity-10 backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
             <div>
-              <i className="fa-solid fa-graduation-cap w-10 h-10 rounded-full bg-primary flex items-center justify-center text-custom-light-high"></i>
+              <i className="fa-solid fa-graduation-cap w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black"></i>
             </div>
             <div className="">
               <p className="font-bold">2020-2022</p>
@@ -45,7 +45,7 @@ export default function Resume() {
 
           <div className="flex items-center gap-5 p-5 mx-2 rounded-lg bg-gray-300 bg-opacity-10 backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
             <div>
-              <i className="fa-solid fa-graduation-cap w-10 h-10 rounded-full bg-primary flex items-center justify-center text-custom-light-high"></i>
+              <i className="fa-solid fa-graduation-cap w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black"></i>
             </div>
             <div className="">
               <p className="font-bold">2014-2019</p>
@@ -65,7 +65,7 @@ export default function Resume() {
 
           <div className="flex items-center gap-5 p-5 mx-2 rounded-lg bg-gray-300 bg-opacity-10 backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
             <div>
-              <i className="fa-solid fa-briefcase w-10 h-10 rounded-full bg-custom-primary flex items-center justify-center text-custom-light-high"></i>
+              <i className="fa-solid fa-briefcase w-10 h-10 rounded-full bg-custom-primary flex items-center justify-center text-black"></i>
             </div>
             <div className="">
               <p className="font-bold">2018-2023</p>
@@ -79,7 +79,7 @@ export default function Resume() {
 
           <div className="flex items-center gap-5 p-5 mx-2 rounded-lg bg-gray-300 bg-opacity-10 backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
             <div>
-              <i className="fa-solid fa-briefcase w-10 h-10 rounded-full bg-primary flex items-center justify-center text-custom-light-high"></i>
+              <i className="fa-solid fa-briefcase w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black"></i>
             </div>
             <div className="">
               <p className="font-bold">2020-2022</p>
@@ -93,7 +93,7 @@ export default function Resume() {
 
           <div className="flex items-center gap-5 p-5 mx-2 rounded-lg bg-gray-300 bg-opacity-10 backdrop-blur-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
             <div>
-              <i className="fa-solid fa-briefcase w-10 h-10 rounded-full bg-primary flex items-center justify-center text-custom-light-high"></i>
+              <i className="fa-solid fa-briefcase w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black"></i>
             </div>
             <div className="">
               <p className="font-bold">2014-2019</p>
