@@ -1,11 +1,9 @@
+"use client";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
-import { useSelector } from "react-redux";
+import { useEffect, useMemo, useState } from "react";
 
 const ParticlesComponent = (props) => {
-  const isDarkMode = useSelector((state) => state.darkMode);
-
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -15,46 +13,41 @@ const ParticlesComponent = (props) => {
     });
   }, []);
 
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
   const options = useMemo(
     () => ({
+      background: {
+        color: {
+          value: "#ffffff",
+        },
+      },
       fpsLimit: 120,
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: "repulse",
-          },
           onHover: {
             enable: true,
-            mode: "attract",
+            mode: "repulse", // Particles will shift away, not attract
           },
         },
         modes: {
-          push: {
-            distance: 200,
-            duration: 15,
-          },
-          grab: {
-            distance: 150,
+          repulse: {
+            distance: 100, // Distance from pointer where particles shift away
+            speed: 100, // Speed at which the particles move away from the pointer
           },
         },
       },
       particles: {
-        number: {
-          value: 120, // Adjust particle count for performance and visibility
-          density: {
-            enable: true,
-            value_area: 800,
-          },
-        },
         color: {
-          value: "#979797",
+          value: "#000000",
         },
         links: {
-          color: "#737373",
-          distance: 150,
+          color: "#000000",
+          distance: 140,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.6,
           width: 1,
         },
         move: {
@@ -64,19 +57,23 @@ const ParticlesComponent = (props) => {
             default: "bounce",
           },
           random: true,
-          speed: 1, // Reduced speed for clearer visualization of blink
+          speed: 2,
           straight: false,
         },
-
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 200,
+        },
+        opacity: {
+          value: 1.0,
+        },
         shape: {
           type: "circle",
-          stroke: {
-            width: 0,
-            color: "#ffffff",
-          },
         },
         size: {
-          value: { min: 2, max: 4 }, // Particle size range
+          value: { min: 3, max: 7 },
         },
       },
       detectRetina: true,
@@ -84,7 +81,7 @@ const ParticlesComponent = (props) => {
     []
   );
 
-  return <Particles id={props.id} init={init} options={options} />;
+  return <Particles id={props.id} init={particlesLoaded} options={options} />;
 };
 
 export default ParticlesComponent;

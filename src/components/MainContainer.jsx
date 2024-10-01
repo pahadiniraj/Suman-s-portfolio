@@ -4,7 +4,6 @@ import About from "./About";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import { Element } from "react-scroll";
-import Navbar from "./Navbar";
 import ParticlesComponent from "./ParticlesComponent";
 import { useSelector } from "react-redux";
 
