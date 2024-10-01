@@ -12,7 +12,6 @@ export default function MainContainer() {
   const isDarkMode = useSelector((state) => state.darkMode);
   return (
     <>
-      <Navbar />
       <Element name="homeSection">
         <Home />
       </Element>

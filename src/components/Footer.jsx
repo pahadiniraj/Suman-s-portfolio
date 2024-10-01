@@ -3,7 +3,7 @@ import { buttonPrimary, buttonSecondary } from "../utils/StyleUtils";
 
 export default function Footer() {
   return (
-    <div className="px-3 py-10  bg-custom-primary text-black">
+    <div className="px-3 py-10  bg-opacity-10 ">
       <div className="text-center space-y-2">
         <p className="text-2xl font-bold ">DR. SUMAN DHAMALA</p>
         <p>

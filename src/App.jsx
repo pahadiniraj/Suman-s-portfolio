@@ -7,6 +7,7 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from "./state/state";
 import { motion } from "framer-motion"; // Assuming you're using framer-motion
 import { div } from "framer-motion/client";
+import Navbar from "./components/Navbar";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function App() {
 
       {loaderComplete && (
         <div>
+          <Navbar />
           <Outlet />
           <Footer />
         </div>

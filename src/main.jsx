@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Navigate to="main" replace />,
       },
       {
-        path: "/main",
+        path: "main",
         element: <MainContainer />,
       },
       {
@@ -69,49 +69,51 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to={`/portfolio-management/management/dashboard`} replace />,
+        element: (
+          <Navigate to={`/portfolio-management/management/dashboard`} replace />
+        ),
       },
       {
         path: "/portfolio-management/management/dashboard",
-        element: <Dashboard/>,
+        element: <Dashboard />,
       },
       {
         path: "/portfolio-management/management/info",
-        element: <InfoManagement/>,
+        element: <InfoManagement />,
       },
       {
         path: "/portfolio-management/management/home",
-        element: <HomeManagement/>,
+        element: <HomeManagement />,
       },
       {
         path: "/portfolio-management/management/about",
-        element: <AboutManagement/>,
+        element: <AboutManagement />,
       },
       {
         path: "/portfolio-management/management/resume",
-        element: <ResumeManagement/>,
+        element: <ResumeManagement />,
       },
       {
         path: "/portfolio-management/management/contact",
-        element: <ContactManagement/>,
+        element: <ContactManagement />,
       },
       {
         path: "/portfolio-management/management/blog",
-        element: <BlogManagement/>,
+        element: <BlogManagement />,
       },
       {
         path: "/portfolio-management/management/messages",
-        element: <Messages/>,
+        element: <Messages />,
       },
       {
         path: "/portfolio-management/management/reports",
-        element: <Reports/>,
+        element: <Reports />,
       },
-    ]
+    ],
   },
   {
     path: "/test",
-    element: <BlogManagement/>,
+    element: <BlogManagement />,
   },
 ]);
 

@@ -8,8 +8,8 @@
 }
 
 .light-mode {
-  background-color: #d9d9d9;
-  color: #333;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 #particlesBackground canvas {
@@ -64,9 +64,7 @@ hr {
   );
 }
 
-.active {
-  @apply text-primary;
-}
+
 
 /* SwiperSlider */
 .swiper {

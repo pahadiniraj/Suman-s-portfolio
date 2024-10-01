@@ -9,8 +9,6 @@ export default function DarkModeToggler({ className }) {
   const { toggleDarkModeAction } = bindActionCreators(actionCreators, dispatch);
 
   const toggleDarkMode = () => {
-    // const html = document.documentElement;
-    // html.classList.toggle("dark");
     toggleDarkModeAction(!darkMode);
   };
 
@@ -23,15 +21,6 @@ export default function DarkModeToggler({ className }) {
       document.body.classList.remove("dark-mode");
     }
   }, [darkMode]);
-
-  // useEffect(() => {
-  //   if (darkMode === null) {
-  //     const prefersDarkMode = window.matchMedia(
-  //       "(prefers-color-scheme: dark)"
-  //     ).matches;
-  //     toggleDarkModeAction(prefersDarkMode);
-  //   }
-  // }, []);
 
   return (
     <span

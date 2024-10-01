@@ -1,13 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { buttonPrimary, buttonSecondary } from "../utils/StyleUtils";
+import {
+  buttonPrimary,
+  buttonQuaternary,
+  buttonSecondary,
+  buttonTertiary,
+} from "../utils/StyleUtils";
 import { Link } from "react-scroll";
 import SumanProfile from "../assets/images/SumanProfile.png";
 import HardwareImage from "../assets/images/hardwareBackground.jpg";
 import { ReactTyped } from "react-typed";
 import { buttonVariants, textVariants, imageVariants } from "../utils/Framer";
-
+import { useSelector } from "react-redux";
 export default function Home() {
+  const darkMode = useSelector((state) => state.darkMode);
+
   return (
     <div className="px-3 py-10 md:p-20 min-h-screen flex items-center justify-between gap-10">
       <motion.div
@@ -16,7 +23,10 @@ export default function Home() {
         animate="visible"
         transition={{ staggerChildren: 0.5 }}
       >
-        <motion.div className="text-primary" variants={textVariants}>
+        <motion.div
+          className={`${darkMode ? "text-primary" : "text-blue-700"}`}
+          variants={textVariants}
+        >
           <p className="md:text-3xl font-bold">
             My name is <span>Suman Dhamala</span>
           </p>
@@ -52,7 +62,9 @@ export default function Home() {
           >
             <motion.span
               variants={buttonVariants}
-              className={`${buttonSecondary} md:text-xl font-medium flex justify-center items-center transition duration-300 hover:text-white`}
+              className={`${
+                darkMode ? buttonSecondary : buttonTertiary
+              } md:text-xl font-medium flex justify-center items-center transition duration-300 hover:text-white`}
             >
               My Resume&nbsp;
               <span className="fa-solid fa-user-tie"></span>
@@ -68,7 +80,9 @@ export default function Home() {
           >
             <motion.span
               variants={buttonVariants}
-              className={`${buttonPrimary} md:text-xl font-medium flex justify-center items-center transition duration-300 hover:bg-blue-700 hover:text-white`}
+              className={`${
+                darkMode ? buttonPrimary : buttonQuaternary
+              } md:text-xl font-medium flex justify-center items-center transition duration-300 hover:bg-blue-700 hover:text-white`}
             >
               Contact Me&nbsp;
               <span className="fa-solid fa-phone"></span>
@@ -77,7 +91,9 @@ export default function Home() {
         </div>
       </motion.div>
       <motion.div
-        className="hidden md:block h-[380px] w-[380px] text-center relative rounded-full overflow-hidden border-8 border-[#9c9723]"
+        className={`hidden md:block h-[380px] w-[380px] text-center relative rounded-full overflow-hidden border-8 ${
+          darkMode ? "border-[#9c9723]" : "border-blue-600"
+        }  `}
         style={{
           backgroundImage: `url(${HardwareImage})`,
           backgroundSize: "cover",

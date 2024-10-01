@@ -4,6 +4,12 @@ export const buttonPrimary =
 export const buttonSecondary =
   "cursor-pointer bg-custom-dark text-custom-light-low py-2 px-5 rounded-full hover:bg-custom-dark hover:ring-1 hover:ring-primary border border-primary";
 
+export const buttonTertiary =
+  "cursor-pointer  text-black py-2 px-5 rounded-full hover:bg-blue-700 hover:ring-1 hover:border-blue-800 border border-blue-700";
+
+export const buttonQuaternary =
+  "cursor-pointer  text-black py-2 px-5 rounded-full bg-blue-700 text-white hover:ring-1 hover:border-blue-800 border border-blue-700";
+
 export const buttonOptional =
   "cursor-pointer bg-custom-light-high text-black py-2 px-5 rounded-full hover:bg-custom-dark hover:text-[#e1d816] duration-200";
 
